@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+    <!-- 加载编辑器的容器 -->
+    <script id="container" name="content" type="text/plain"> 
+    </script>
+    <button id="btn">保存</button>
+    <!-- 配置文件 -->
+    <script type="text/javascript" src="ueditor/ueditor.config.js"></script>
+    <!-- 编辑器源码文件 -->
+    <script type="text/javascript" src="ueditor/ueditor.all.js"></script>
+    <script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>
+     <script type="text/javascript" charset="utf-8" src="ueditor/lang/zh-cn/zh-cn.js"></script>
+    <!-- 实例化编辑器 -->
+    <script type="text/javascript">
+		$(function(){
+			  var ue = UE.getEditor('container');
+			   $("#btn").click(function(){	
+				   var html;
+				   var txt;
+				   ue.ready(function(){
+					    //设置编辑器的内容
+					    //ue.setContent('hello');
+					    //获取html内容，返回: <p>hello</p>
+					      html = ue.getContent();
+					    //获取纯文本内容，返回: hello
+					     //txt = ue.getContentTxt();
+					     
+					});
+				   //alert(html);
+			  $.ajax({
+				   url:'ueditor/save.action',
+				   contentType:"application/json; charset=utf-8",
+				   type:'get',
+				   data:{"text":html,"titleid":23},
+				   dataType:'json',
+				   success:function(res){
+					   if(res.statusCode==200){
+						 alert(res.msg); 
+						 window.location.href ="/uEditorDemo/ueditorshow.html";
+					   }else{
+						  alert(res.msg);  
+					   }
+					   console.log(res);	 				
+				   },
+				   error:function(err)
+				   {
+					   alert("error");    			
+				   }
+		     });					
+		   })		
+		});
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>完整demo</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>
+
+    <style type="text/css">
+        div{
+            width:100%;
+        }
+    </style>
+    
+    
+</head>
+<body>
+<div>
+
+  <p id="one"></p>
+  
+</div>
+
+
+<script type="text/javascript">
+
+$(function(){
+	  var one= document.getElementById("one"); 
+	  $.ajax({
+		   url:'ueditor/select.action',
+		   contentType:"application/json; charset=utf-8",
+		   type:'get',
+	       data:{"titleid":23},
+		   dataType:'json',
+		   success:function(res){
+			   if(res.statusCode==200){
+			    	 one.innerHTML=res.responseBean.text;		
+			   }else{
+					
+			   }		
+		   },
+		   error:function(err)
+		   {
+		     alert("error");    			
+		   }
+      })					
+});
+
+</script>
+</body>
+</html>
