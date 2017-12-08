@@ -1,5 +1,5 @@
 #开发环境
-jdk1.7+tomcat7<br>
+jdk1.7+tomcat7+mysql5.6<br>
 #使用的框架
 spring+springmvc+mybatis
 
