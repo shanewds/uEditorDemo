@@ -27,7 +27,8 @@ spring+springmvc+mybatis
 
 
 
-访问修改后的富文本编辑器风格的样式,可以对插入的图片可以进行设置 url地址：http://localhost:8080/uEditorDemo/neditor.html<br>
+访问修改后的富文本编辑器风格的样式,可以对插入的图片进行样式的设置<br>
+url地址：http://localhost:8080/uEditorDemo/neditor.html<br>
 如下图显示如下:如完成图片的上传加上文字的说明功能的实现,点击保存跳转到图片显示的页面展示<br>
 ![Image text](https://github.com/shanewds/Image/blob/master/image/neditor2-2.jpg)<br>
 
