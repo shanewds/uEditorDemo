@@ -1,5 +1,7 @@
 #开发环境
 jdk1.7+tomcat7
+#使用的框架
+spring+springmvc+mybatis
 
 #uEditorDemo
 百度富文本编辑器的完美整合到SSM框架中
