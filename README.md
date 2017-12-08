@@ -9,6 +9,7 @@
 
 #本项目参考其它的资料,做了两个富文本编辑器样式的显示
 
-![Image text](https://github.com/shanewds/Image/blob/master/image/430222.jpg)
+# ![Image text](url地址)
+
 
 
